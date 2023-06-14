@@ -21,6 +21,7 @@ const Home: NextPage = () => {
       await connection.getAccountInfo(key).then(accountInfo => {
         if (accountInfo !== null) {
           setIsExecutable(`${accountInfo.executable}`);
+          console.log(accountInfo);
         } else {
           setIsExecutable('');
         }
